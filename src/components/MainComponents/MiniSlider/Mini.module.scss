@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container {
+  scroll-behavior: smooth;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 20px 0 60px;
+    box-sizing: border-box;
+    .root {
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        .carouselContainer {
+            height: 100%;
+           .carouselBox {
+            width: 100% !important;
+                .carouselItem {
+                    width: 100%;
+                    padding: 0 20px !important;
+                    height: 100%;
+                    &::before {
+                        content: '';    
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
