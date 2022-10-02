@@ -11,18 +11,6 @@ import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import Loader from '../../Loader'
 
-// fetch('https://movie-app-56809-default-rtdb.asia-southeast1.firebasedatabase.app/favorites.json', {
-//   method: 'POST',
-//   headers: {
-//     'content-type': 'application/json'
-//   },
-//   body: {
-//     title: '123'
-//   }
-// }) 
-//   .then(res => res.json())
-//   .then(r => console.log(r))
-
 const MoviesList = () => {
 	const [data, setData] = useState(null)
 	const [totalPages, setTotalPages] = useState(null)

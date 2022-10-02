@@ -4,6 +4,7 @@ import Tilt from 'react-parallax-tilt'
 import { Link } from "react-router-dom"
 import { imgUrl } from "../../config/baseUrl"
 import classNames from 'classnames'
+import img from './img/obrabotka.png'
 
 export const Favorite = () => {
   // const { favorites, onAddToFavorite } = React.useContext(AppContext)
@@ -12,6 +13,8 @@ export const Favorite = () => {
     <div className={cls.root}>
       <div className={cls.container}>
         <div className={cls.content}>
+          <h1 style={{color: '#fff'}}>Страница в обработке</h1>
+          <img src={img} alt="" width={700} />
           {/* {
             favorites.map(( id, poster_path ) => (
               <Tilt

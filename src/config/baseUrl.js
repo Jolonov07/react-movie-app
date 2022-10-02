@@ -1,14 +1,8 @@
-import axios from "axios";
-
-// baseURL
 export const baseURL = 'https://api.themoviedb.org/3'
 // export const baseURL = 'ttps://api.kinopoisk.dev'
-// api key
-export const api_key = '4cdc77ade6d278c3a1b313cca08fa07f';
-// export const api_key = '2WRJZQN-S2A47F3-MNWTKFF-RE3AQ7M';
-// language
-export const language = 'ru-RU';
-// imgUrl
+export const api_key = '4cdc77ade6d278c3a1b313cca08fa07f'
+// export const api_key = '2WRJZQN-S2A47F3-MNWTKFF-RE3AQ7M'
+export const language = 'ru-RU'
 export const imgUrl = 'https://image.tmdb.org/t/p/original'
 
 export const getMoviesRequest = (page, sortBy) => {
@@ -46,9 +40,3 @@ export const searchMovieRequest = (page, query) => {
     .then(res => res.json())
     .then(r => r)
 }
-
-// export const axiosRequest = () => {
-//     return axios.create('baseURL')
-// }
-
-// axiosRequest.get('/movies')

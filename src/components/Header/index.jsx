@@ -2,8 +2,8 @@ import React from "react"
 import cls from './Header.module.scss'
 import { NavLink } from "react-router-dom"
 import { BiUser } from 'react-icons/bi'
-import { IoMdSearch } from 'react-icons/io';
-import Search from "../ModalSearch";
+import { IoMdSearch } from 'react-icons/io'
+import Search from "../ModalSearch"
 
 const navs = [
    {
@@ -12,19 +12,9 @@ const navs = [
        id: 1,
    },
    {
-       title: 'Фильмы',
-       to: '/films',
-       id: 2,
-   },
-   {
-       title: 'Люди',
-       to: '/persons',
-       id: 3,
-   },
-   {
        title: 'Избранное',
        to: '/favorites',
-       id: 4,
+       id: 2,
    },
 ]
 

@@ -10,26 +10,12 @@ import Persons from '../../components/MainComponents/MiniSlider'
 export const SingleMovie = () => {
     const [data, setData] = useState(null)
     const { id } = useParams()
-    
 
     useEffect(() => {
         singleMovieRequest(id)
         .then(res => setData(res))
         return () => {}
     }, [setData, id])
-
-    // const onAddToFavorite = async (obj) => {
-    //       if (favorites.find((favObj) => Number(favObj.id) === Number(obj.id))) {
-    //         axios.delete(`https://60d62397943aa60017768e77.mockapi.io/favorites/${obj.id}`)
-    //         setFavorites((prev) => prev.filter((item) => Number(item.id) !== Number(obj.id)))
-    //       } else {
-    //         const { data } = await axios.post(
-    //           'https://60d62397943aa60017768e77.mockapi.io/favorites',
-    //           obj,
-    //         )
-    //         setFavorites((prev) => [...prev, data])
-    //       }
-    //     } 
 
     return(
         data ? (

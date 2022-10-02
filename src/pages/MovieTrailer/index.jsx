@@ -1,23 +1,23 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { useParams } from "react-router";
-import { imgUrl, singleMovieRequest, singleMovieTrailerRequest } from "../../config/baseUrl";
-import cls from './MovieTrailer.module.scss';
+import { useParams } from "react-router"
+import { imgUrl, singleMovieRequest, singleMovieTrailerRequest } from "../../config/baseUrl"
+import cls from './MovieTrailer.module.scss'
 
 export const MovieTrailer = () => {
-    const [data, setData] = useState(null);
-    const [movieTrailer, setMovieTrailer] = useState(null);
-    const { id } = useParams();
+    const [data, setData] = useState(null)
+    const [movieTrailer, setMovieTrailer] = useState(null)
+    const { id } = useParams()
 
     useEffect(() => {
         singleMovieRequest(id)
-        .then(res => setData(res));
+        .then(res => setData(res))
         return () => {}
     }, [setData, id])
 
     useEffect(() => {
         singleMovieTrailerRequest(id)
-        .then(res => setMovieTrailer(res.results));
+        .then(res => setMovieTrailer(res.results))
         return () => {}
     }, [id, setMovieTrailer])
 

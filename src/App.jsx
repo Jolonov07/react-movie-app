@@ -7,22 +7,18 @@ import { Favorite } from './pages/Favorite'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './index.css'
-import { Persons } from './pages/Persons'
-import Films from './pages/Films'
 
 function App() {
   return (
     <div className='root'>
       <Header />
-        <Routes>
-            <Route path='/' element={<Main />}  />
-            <Route path='/films' element={<Films />} />
-            <Route path='/favorites' element={<Favorite />}  />
-            <Route path="/movie/:id" element={<SingleMovie />} />
-            <Route path="/movie/trailer/:id" element={<MovieTrailer />} />
-            <Route path="/persons" element={<Persons />} />
-            <Route to="/" />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Main />}  />
+        <Route path='/favorites' element={<Favorite />}  />
+        <Route path="/movie/:id" element={<SingleMovie />} />
+        <Route path="/movie/trailer/:id" element={<MovieTrailer />} />
+        <Route to="/" />
+      </Routes>
       <Footer />
     </div>
   )
